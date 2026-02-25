@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+    <!-- lightbox modal structure -->
+    <div id="lightbox-modal" class="modal" role="dialog" aria-hidden="true">
+        <span class="modal-close" aria-label="Close">&times;</span>
+        <img class="modal-content" id="modal-img" src="" alt="">
+    </div>
+
+    <header id="home">
+        <h1>Project Portfolio</h1>
+        <nav role="navigation" class="nav-container">
+            <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                ☰
+            </button>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur bibendum. Curabitur ac ligula a odio efficitur tincidunt. Sed at felis nec nisi convallis fermentum.</p>
+    </section>
+
+    <section id="projects">
+        <div class="filter-controls">
+            <button onclick="filterprojects('all')">All</button>
+            <button onclick="filterprojects('web')">Web</button>
+            <button onclick="filterprojects('data')">Data</button>
+        </div>
+        <article data-category="data">
+            <h2>Project 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur bibendum.</p>
+        </article>
+        <figure data-category="web">
+            <img src="M.png" alt="Stylized M">
+            <figcaption>Project 1 Description</figcaption>
+        </figure>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li class="skill-html">HTML</li>
+            <li class="skill-css">CSS</li>
+            <li class="skill-js">JavaScript</li>
+            <li class="skill-python">Python</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form role="form" id="contact-form" novalidate>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message" id="name-error"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="email-error"></span>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <span class="error-message" id="message-error"></span>
+
+            <button type="submit">Send</button>
+        </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
